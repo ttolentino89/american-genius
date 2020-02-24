@@ -1,5 +1,7 @@
 # american-genius
 
+![alt text](https://www.telegraph.co.uk/content/dam/news/2018/10/11/TELEMMGLPICT000177551748_trans_NvBQzQNjv4BqHVTgFvaukf5kTUkAkiDHlfebxCCKfKZQdFju1dFJhiY.jpeg?imwidth=450 "American Geniuses?")
+
 In October of 2018, rapper and self-proclaimed "genius" Kanye West met with the 46th American president and leader of the free world, Donald Trump. The following media frenzy was a half-hour long bizarre spiel of Mr. West ranting about pretty much anything that came to his mind. The usually-verbose President Trump sat dead-silent, apparently taking it all in as if any of West's thoughts resembled any vestige of coherent sense. Sometimes reality is stranger than fiction, and this meeting was no exception.  
 
 This is the world we live in, and the standard of intelligence and moral compass (or complete lack thereof) to which we now laud our public figures. Both men are still well-respected in their own rights, and will be for the forseeable future. Welcome to America in the 21st century.
