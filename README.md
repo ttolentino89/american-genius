@@ -20,10 +20,10 @@ Planned React components (in no particular order):
 
 The kanye.rest API only has one endpoint and returns requests in pure text format, which makes it pretty easy to generate random quotes. After all, the genius of Kanye West cannot be categorized, as it is endless and all-encompassing compared to our mere un-gifted, pedestrian minds. This obviously makes total sense.
 
-The tronaldump.io API however is a bit heavier, and can get requests by category, ID, date, etc. This API is based on President Trump's tweets, and we all know how much of a content goldmine these tweets have become over the years. Basically, there's a ton more material to work with. This API also produces branded memes with quotes already printed on them, and you bet your ass I will be making full use of this excellent feature.
+The tronaldump.io API however is a bit heavier, and can get requests by category, ID, date, etc. This API is based on President Trump's twitter, and we all know how much of a content goldmine these tweets have become over the years. Basically, there's a *ton* more material to work with. This API also produces branded memes with quotes already printed on them, and you bet your ass I will be making full use of this excellent feature.
 
 ## Post-MVP goals:
-- Including the Youtube React component so I can autoplay the viral video of the Kanye/Donald trump that serves as the inspiration of this very webapp
+- Including the Youtube React component so I can autoplay the viral video of the Kanye/Donald chat that serves as the inspiration of this very webapp
 - Include the Open Legal Code API so users can search and view exactly what laws & bills Prez46 has passed or vetoed during his presidency, for better or (mostly) worse.
 - Heck, maybe even include access to a Charity or Non-Profit finder API so users can donate to causes dedicated to the important things our Commander in Chief defunded and/or destroyed.
 - I've just learned that Genius (heh) has an API that can find and display Kanye lyrics. This might need to happen.
