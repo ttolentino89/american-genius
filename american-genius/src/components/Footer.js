@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-export default Footer extends Component {
+const Footer = () => (
+	<footer>
+		<p>West/Trump 2020</p>
+	</footer>
+)
 
-}
+export default Footer
