@@ -3,15 +3,24 @@ import YouTube from 'react-youtube';
 
 class Video extends Component {
 
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+   event.target.pauseVideo();
+   event.target.mute();
+  }
+
+   _onEnd(event) {
+    event.target.playVideo();
+   }
+
   render() {
      const opts = {
-       // height: '390',
-       // width: '640',
        playerVars: { // https://developers.google.com/youtube/player_parameters
          autoplay: 1,
-         // controls: 0,
+         controls: 0,
          rel: 0,
-         showinfo: 0
+         showinfo: 0,
+         // start: 40,
        }
      };
 
@@ -19,26 +28,16 @@ class Video extends Component {
     <div className="video-background">
       <div className="video-foreground">
        <YouTube
-         videoId="egGUqv8LTkw"
+         videoId="4jtvJrIYaTI"
          opts={opts}
-         onReady={this._onReady}
          className="video-iframe"
+         onReady={this._onReady}
           onEnd={this._onEnd}
        />
       </div>
     </div>
      );
    }
-
-   _onReady(event) {
-     // access to player in all event handlers via event.target
-     event.target.pauseVideo();
-    event.target.mute();
-   }
-
-    _onEnd(event) {
-     event.target.playVideo();
-    }
  }
 
 export default Video;
