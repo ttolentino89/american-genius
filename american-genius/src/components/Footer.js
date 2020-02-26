@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => (
 	<footer>
-		<p>West/Trump 2020</p>
+		<p>Inside the mind of a genius.</p>
 	</footer>
 )
 
