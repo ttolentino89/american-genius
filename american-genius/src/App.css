@@ -1,8 +1,35 @@
-.App {
-  text-align: center;
+
+
+ /* header {
+  background-color: black;
+  color: white;
+} */
+
+
+* {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto Condensed', ;
 }
 
-.App-header {
+.App {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+app {
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 45px;
+}
+
+ /* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,11 +38,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 .vid {
   position: fixed;

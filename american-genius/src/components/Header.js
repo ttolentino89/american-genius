@@ -1,5 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Header extends Component {
-  
-}
+const Header = () => (
+	<header>
+		<h1>American Genius</h1>
+	</header>
+)
+
+export default Header
