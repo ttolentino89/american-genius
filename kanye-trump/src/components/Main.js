@@ -27,17 +27,6 @@ class Main extends React.Component {
   }
 
 
-
-
-  // async componentDidUpdate() {
-  //   this.setState({
-  //     kanye: response.data,
-  //     trump: response2.data
-  //   })
-  // }
-
-
-
   render() {
     const {kanye, trump} = this.state
     let close = (
@@ -134,7 +123,7 @@ class Main extends React.Component {
                 <button type="submit"
                 value="Send Message"
                 className="special"
-                onClick={() => window.location.reload(false)}
+                onClick={() => window.location.reload()}
                 >Send Message</button>
               </li>
               <li>
