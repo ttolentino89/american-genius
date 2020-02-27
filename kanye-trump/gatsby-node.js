@@ -20,4 +20,5 @@ exports.sourceNodes = async ({ actions }) => {
   return
 }
 
-//graphQL node goes here?
+//graphQL node goes here??????
+//probably just going to use PropTypes instead

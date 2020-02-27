@@ -28,6 +28,16 @@ class Main extends React.Component {
 
 
 
+
+  // async componentDidUpdate() {
+  //   this.setState({
+  //     kanye: response.data,
+  //     trump: response2.data
+  //   })
+  // }
+
+
+
   render() {
     const {kanye, trump, loading} = this.state
     let close = (
@@ -81,13 +91,18 @@ class Main extends React.Component {
             <img src={homies} alt="" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+          This has become the height of political discourse in this country. Think about that.
+          <br />
+          <br />
+          Further reading:<br />
+          <a href="https://pitchfork.com/thepitch/kanye-west-and-why-the-myth-of-genius-must-die/">Kanye West and Why the Myth of “Genius” Must Die</a>
+          <br />
+          <a href="https://www.cheatsheet.com/entertainment/trumps-worst-tweets-so-far.html/">20 of Trump's Worst Tweets (So Far)</a>
+          </p>
+          <p>Special thanks to the creators of:<br />
+          <a href="https://kanye.rest/">Kanye Rest.API</a>
+          <br />
+          <a href="https://www.tronalddump.io/">Tronald Dump API</a>
           </p>
           {close}
         </article>
