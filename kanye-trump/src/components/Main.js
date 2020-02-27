@@ -1,15 +1,12 @@
-import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import PropTypes from 'prop-types'
 import homies from '../images/kanyetrump.jpg'
 import Axios from 'axios';
 
 class Main extends React.Component {
   state = {
-    loading: true,
-    kanye: []
+    kanye: '',
+    trump: '',
   }
 
   async componentDidMount() {
@@ -17,17 +14,22 @@ class Main extends React.Component {
       const response = await Axios.get(
         `https://api.kanye.rest/`
       )
+      const response2 = await Axios.get(
+        `http://tronalddump.io/random/quote`
+      )
       this.setState({
         kanye: response.data,
-        loading: false
+        trump: response2.data
       })
     } catch(error){
       console.log(error)
     }
   }
 
+
+
   render() {
-    const {kanye, loading} = this.state
+    const {kanye, trump, loading} = this.state
     let close = (
       <div
         className="close"
@@ -44,50 +46,26 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
+          id="kanye"
           className={`${this.props.article === 'intro' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Kanye Says:</h2>
-          <span className="image main">
-            <img src={pic01} alt="" />
-          </span>
-          <h1>"{kanye.quote}"</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-          </p>
+          <p className="major">Kanye Says:</p>
+          <h2>"{kanye.quote}"</h2>
           {close}
         </article>
 
         <article
-          id="work"
+          id="trump"
           className={`${this.props.article === 'work' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Trump Tweets:</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
-          </p>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
+          <p className="major">Trump Tweets:</p>
+          <h2>"{trump.value}"</h2>
           {close}
         </article>
 
