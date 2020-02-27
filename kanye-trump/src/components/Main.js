@@ -39,7 +39,7 @@ class Main extends React.Component {
 
 
   render() {
-    const {kanye, trump, loading} = this.state
+    const {kanye, trump} = this.state
     let close = (
       <div
         className="close"
@@ -131,10 +131,14 @@ class Main extends React.Component {
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <button type="submit"
+                value="Send Message"
+                className="special"
+                onClick={() => window.location.reload(false)}
+                >Send Message</button>
               </li>
               <li>
-                <input type="reset" value="Reset" />
+                <button type="reset" value="Reset">Reset</button>
               </li>
             </ul>
           </form>

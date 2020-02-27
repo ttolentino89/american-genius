@@ -4,17 +4,6 @@ module.exports = {
     description: 'A Conversation with Kanye West and Donald Trump',
   },
   plugins: [
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `GitHub`,
-        fieldName: `github`,
-        url: `https://api.github.com/graphql`,
-        headers: {
-          Authorization: `Bearer github-token`,
-        },
-      },
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
