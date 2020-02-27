@@ -3,6 +3,7 @@ import React from 'react'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import homies from '../images/kanyetrump.jpg'
 
 class Main extends React.Component {
   render() {
@@ -91,9 +92,9 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
+          <h2 className="major">This is America</h2>
           <span className="image main">
-            <img src={pic03} alt="" />
+            <img src={homies} alt="" />
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
@@ -126,7 +127,8 @@ class Main extends React.Component {
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4">Disclaimer: I have nothing to do with either Mr. West or President Trump.
+              If you are a legal representative from either estate, or simply sending an angry email as is your right to do so under the First Amendment, please keep this in mind.</textarea>
             </div>
             <ul className="actions">
               <li>

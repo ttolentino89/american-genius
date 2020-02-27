@@ -19,7 +19,7 @@ const Header = props => (
               props.onOpenArticle('intro')
             }}
           >
-            Kanye Says <i class="fa fa-comment-o" aria-hidden="true"></i>
+            Kanye Quotes <i class="fa fa-comment-o" aria-hidden="true"></i>
           </button>
         </li>
         <li>
@@ -28,7 +28,7 @@ const Header = props => (
               props.onOpenArticle('work')
             }}
           >
-            Trump Thinks <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            Trump Tweets <i class="fa fa-commenting-o" aria-hidden="true"></i>
           </button>
         </li>
         <li>
