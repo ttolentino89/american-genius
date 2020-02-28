@@ -4,10 +4,15 @@ import homies from '../images/kanyetrump.jpg'
 import Axios from 'axios';
 
 class Main extends React.Component {
-  state = {
+  constructor(props){
+  super(props)
+  this.state = {
     kanye: '',
     trump: '',
   }
+  this.getNewTrump = this.getNewTrump.bind(this)
+  this.getNewKanye = this.getNewKanye.bind(this)
+}
 
   async componentDidMount() {
     try {
@@ -26,9 +31,29 @@ class Main extends React.Component {
     }
   }
 
+  getNewTrump = async () => {
+    let res = await Axios.get(
+      `http://tronalddump.io/random/quote`
+    )
+    this.setState({
+      trump: res.data
+    })
+    console.log(res)
+  }
+
+  getNewKanye = async () => {
+    let res = await Axios.get(
+      `https://api.kanye.rest/`
+    )
+    this.setState({
+      kanye: res.data
+    })
+    console.log(res)
+  }
+
 
   render() {
-    const {kanye, trump} = this.state
+    // const {kanye, trump} = this.state
     let close = (
       <div
         className="close"
@@ -52,7 +77,10 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <p className="major">Kanye Says:</p>
-          <h2>"{kanye.quote}"</h2>
+          <h2>"{this.state.kanye.quote}"</h2>
+          <br />
+          <br />
+          <button onClick={this.getNewKanye}>More Genius</button>
           {close}
         </article>
 
@@ -64,7 +92,10 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <p className="major">Trump Tweets:</p>
-          <h2>"{trump.value}"</h2>
+          <h2>"{this.state.trump.value}"</h2>
+          <br />
+          <br />
+          <button onClick={this.getNewTrump}>More MAGA</button>
           {close}
         </article>
 
