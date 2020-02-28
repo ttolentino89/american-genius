@@ -4,42 +4,58 @@ import homies from '../images/kanyetrump.jpg'
 import Axios from 'axios';
 
 class Main extends React.Component {
-  state = {
+  constructor(props){
+  super(props)
+  this.state = {
     kanye: '',
     trump: '',
   }
+  this.getNewTrump = this.getNewTrump.bind(this)
+  this.getNewKanye = this.getNewKanye.bind(this)
+}
 
   async componentDidMount() {
-    try {
-      const response = await Axios.get(
-        `https://api.kanye.rest/`
-      )
-      const response2 = await Axios.get(
-        `http://tronalddump.io/random/quote`
-      )
-      this.setState({
-        kanye: response.data,
-        trump: response2.data
-      })
-    } catch(error){
-      console.log(error)
-    }
+    // try {
+    //   const response = await Axios.get(
+    //     `https://api.kanye.rest/`
+    //   )
+    //   const response2 = await Axios.get(
+    //     `http://tronalddump.io/random/quote`
+    //   )
+    //   this.setState({
+    //     kanye: response.data,
+    //     trump: response2.data
+    //   })
+    // } catch(error){
+    //   console.log(error)
+    // }
+    this.getNewTrump()
+    this.getNewKanye()
+  }
+
+  getNewTrump = async () => {
+    let res = await Axios.get(
+      `http://tronalddump.io/random/quote`
+    )
+    this.setState({
+      trump: res.data
+    })
+    console.log(res)
+  }
+
+  getNewKanye = async () => {
+    let res = await Axios.get(
+      `https://api.kanye.rest/`
+    )
+    this.setState({
+      kanye: res.data
+    })
+    console.log(res)
   }
 
 
-
-
-  // async componentDidUpdate() {
-  //   this.setState({
-  //     kanye: response.data,
-  //     trump: response2.data
-  //   })
-  // }
-
-
-
   render() {
-    const {kanye, trump} = this.state
+    // const {kanye, trump} = this.state
     let close = (
       <div
         className="close"
@@ -63,7 +79,9 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <p className="major">Kanye Says:</p>
-          <h2>"{kanye.quote}"</h2>
+          <h2>"{this.state.kanye.quote}"</h2>
+          <br />
+          <button onClick={this.getNewKanye}>More Genius</button>
           {close}
         </article>
 
@@ -75,7 +93,9 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <p className="major">Trump Tweets:</p>
-          <h2>"{trump.value}"</h2>
+          <h2>"{this.state.trump.value}"</h2>
+          <br />
+          <button onClick={this.getNewTrump}>More MAGA</button>
           {close}
         </article>
 
@@ -134,7 +154,7 @@ class Main extends React.Component {
                 <button type="submit"
                 value="Send Message"
                 className="special"
-                onClick={() => window.location.reload(false)}
+                onClick={() => window.location.reload()}
                 >Send Message</button>
               </li>
               <li>
