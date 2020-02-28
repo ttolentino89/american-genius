@@ -15,20 +15,6 @@ class Main extends React.Component {
 }
 
   async componentDidMount() {
-    // try {
-    //   const response = await Axios.get(
-    //     `https://api.kanye.rest/`
-    //   )
-    //   const response2 = await Axios.get(
-    //     `http://tronalddump.io/random/quote`
-    //   )
-    //   this.setState({
-    //     kanye: response.data,
-    //     trump: response2.data
-    //   })
-    // } catch(error){
-    //   console.log(error)
-    // }
     this.getNewTrump()
     this.getNewKanye()
   }
@@ -55,7 +41,6 @@ class Main extends React.Component {
 
 
   render() {
-    // const {kanye, trump} = this.state
     let close = (
       <div
         className="close"
