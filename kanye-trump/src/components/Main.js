@@ -81,7 +81,6 @@ class Main extends React.Component {
           <p className="major">Kanye Says:</p>
           <h2>"{this.state.kanye.quote}"</h2>
           <br />
-          <br />
           <button onClick={this.getNewKanye}>More Genius</button>
           {close}
         </article>
@@ -95,7 +94,6 @@ class Main extends React.Component {
         >
           <p className="major">Trump Tweets:</p>
           <h2>"{this.state.trump.value}"</h2>
-          <br />
           <br />
           <button onClick={this.getNewTrump}>More MAGA</button>
           {close}
