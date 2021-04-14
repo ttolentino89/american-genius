@@ -8,6 +8,9 @@ This is the world we live in, and the standard of intelligence and moral compass
 
 This webapp is en homage to this (in)famous incident, and will be using two APIs to generate (in)famous quotes from both West and Trump, as if they were having a disjointed conversation about nothing. Honestly, this won't be too far from what actually happened during that meeting and might even make more sense for all we know.
 
+Demo here:
+http://kanye-trump.surge.sh/
+
 ## The game plan:
 
 Planned React components (in no particular order):
